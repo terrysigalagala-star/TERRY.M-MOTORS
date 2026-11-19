@@ -1,0 +1,900 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F4F2;
+    color: #101820;
+}
+
+
+.navbar {
+    background-color: #101820;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 6%;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+}
+
+.logo span {
+    color: #C6A15B;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #C6A15B;
+}
+
+.nav-btn {
+    background-color: #C6A15B;
+    color: #101820;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 4px;
+}
+
+
+.hero {
+    height: 520px;
+    position: relative;
+    overflow: hidden;
+    background-color: #101820;
+    display: flex;
+    align-items: center;
+}
+
+
+.hero-slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideshow 15s infinite;
+}
+
+.hero-slideshow img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-slideshow img:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.hero-slideshow img:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes slideshow {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 0 8%;
+    max-width: 750px;
+}
+
+.small-title {
+    color: #C6A15B;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-size: 43px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.main-btn {
+    display: inline-block;
+    background-color: #C6A15B;
+    color: #101820;
+    text-decoration: none;
+    padding: 14px 25px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.main-btn:hover,
+.nav-btn:hover {
+    background-color: white;
+}
+
+
+.intro {
+    text-align: center;
+    padding: 65px 12%;
+    background-color: white;
+}
+
+.intro h2,
+.featured h2,
+.why-us h2 {
+    margin-bottom: 20px;
+    color: #101820;
+}
+
+.intro p {
+    line-height: 1.8;
+    max-width: 850px;
+    margin: auto;
+}
+
+
+.featured {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.section-text {
+    margin-bottom: 35px;
+}
+
+.car-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.car-card {
+    background-color: white;
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding-bottom: 25px;
+    transition: 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.car-card h3 {
+    margin: 18px 0 10px;
+}
+
+.car-card p {
+    margin-bottom: 18px;
+}
+
+.car-card a {
+    color: #A17B37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.why-us {
+    background-color: #101820;
+    color: white;
+    padding: 60px 7%;
+    text-align: center;
+}
+
+.why-us h2 {
+    color: #C6A15B;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.benefits div {
+    max-width: 280px;
+}
+
+.benefits h3 {
+    color: #C6A15B;
+    margin-bottom: 15px;
+}
+
+.benefits p {
+    line-height: 1.6;
+}
+
+
+footer {
+    background-color: #080D12;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    line-height: 2;
+}
+
+footer h3 {
+    color: #C6A15B;
+}
+
+
+/* ABOUT US BANNER */
+.about-banner {
+    background-color: #101820;
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.about-banner h2 {
+    color: #C6A15B;
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.about-banner p {
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+/* ABOUT INTRODUCTION */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 70px 8%;
+    background-color: white;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: #A17B37;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* MISSION AND VISION */
+.mission {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 65px 8%;
+    background-color: #101820;
+}
+
+.mission-box {
+    background-color: #1D2933;
+    color: white;
+    padding: 35px;
+    flex: 1;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.mission-box h2 {
+    color: #C6A15B;
+    margin-bottom: 20px;
+}
+
+.mission-box p {
+    line-height: 1.8;
+}
+
+/* CORE VALUES */
+.values {
+    text-align: center;
+    padding: 65px 7%;
+    background-color: #F4F4F2;
+}
+
+.values h2 {
+    margin-bottom: 35px;
+}
+
+.values-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    background-color: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.value-card h3 {
+    color: #A17B37;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    line-height: 1.7;
+}
+
+/* ABOUT PAGE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+
+    .about-section,
+    .mission {
+        flex-direction: column;
+    }
+
+    .about-image img {
+        height: 250px;
+    }
+
+    .about-banner h2 {
+        font-size: 27px;
+    }
+
+    .mission-box {
+        width: 100%;
+    }
+}
+
+
+/* CARS PAGE BANNER */
+.cars-banner {
+    background-color: #101820;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cars-banner h2 {
+    color: #C6A15B;
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.cars-banner p {
+    letter-spacing: 2px;
+}
+
+/* CARS INTRODUCTION */
+.cars-intro {
+    text-align: center;
+    padding: 45px 10%;
+    background-color: white;
+}
+
+.cars-intro h2 {
+    margin-bottom: 15px;
+}
+
+.cars-intro p {
+    line-height: 1.8;
+}
+
+/* VEHICLE COLLECTION */
+.car-list {
+    padding: 60px 7%;
+    background-color: #F4F4F2;
+}
+
+.vehicle-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.vehicle-card {
+    background-color: white;
+    width: 320px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-8px);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.vehicle-info {
+    padding: 22px;
+}
+
+.vehicle-info h3 {
+    margin-bottom: 12px;
+    color: #101820;
+}
+
+.vehicle-info p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.vehicle-info h4 {
+    color: #A17B37;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.vehicle-info a {
+    display: inline-block;
+    background-color: #101820;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+}
+
+.vehicle-info a:hover {
+    background-color: #C6A15B;
+    color: #101820;
+}
+
+/* CARS PAGE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+
+    .vehicle-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vehicle-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .cars-banner h2 {
+        font-size: 27px;
+    }
+}
+
+
+/* CONTACT PAGE BANNER */
+.contact-banner {
+    background-color: #101820;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contact-banner h2 {
+    color: #C6A15B;
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.contact-banner p {
+    font-size: 17px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 65px 8%;
+    background-color: #F4F4F2;
+}
+
+/* CONTACT INFORMATION */
+.contact-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-info h2 {
+    color: #A17B37;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-details h3 {
+    color: #A17B37;
+    margin-bottom: 8px;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    flex: 1;
+    background-color: white;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 25px;
+    color: #101820;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #101820;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #C6A15B;
+    color: #101820;
+}
+
+/* CONTACT PAGE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+
+    .contact-section {
+        flex-direction: column;
+        padding: 40px 6%;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .contact-banner h2 {
+        font-size: 27px;
+    }
+}
+
+
+/* REGISTRATION BANNER */
+.registration-banner {
+    background-color: #101820;
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.registration-banner h2 {
+    color: #C6A15B;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.registration-banner p {
+    line-height: 1.7;
+}
+
+/* REGISTRATION SECTION */
+.registration-section {
+    background-color: #F4F4F2;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* REGISTRATION FORM */
+.registration-form {
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.registration-form h2 {
+    text-align: center;
+    color: #A17B37;
+    margin-bottom: 12px;
+}
+
+.form-description {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #101820;
+}
+
+.registration-form input,
+.registration-form select {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+/* FORM BUTTONS */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.form-buttons button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #101820;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    background-color: #C6A15B;
+    color: #101820;
+}
+
+.form-buttons .reset-btn {
+    background-color: #777;
+    color: white;
+}
+
+/* REGISTRATION RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+
+    .registration-form {
+        padding: 25px 18px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .registration-banner h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* VEHICLE DETAILS BANNER */
+.details-banner {
+    background-color: #101820;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.details-banner h2 {
+    color: #C6A15B;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/* DETAILS SECTION */
+.details-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 45px;
+    padding: 65px 7%;
+    background-color: #F4F4F2;
+}
+
+.details-image {
+    flex: 1;
+}
+
+.details-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.details-info {
+    flex: 1;
+}
+
+.car-category {
+    color: #A17B37;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.details-info h2 {
+    margin: 15px 0;
+    color: #101820;
+    font-size: 28px;
+}
+
+.details-info h3 {
+    color: #A17B37;
+    margin-bottom: 18px;
+}
+
+.details-info p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.spec-title {
+    margin-top: 25px;
+}
+
+/* SPECIFICATION TABLE */
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background-color: white;
+}
+
+.spec-table th,
+.spec-table td {
+    border: 1px solid #ddd;
+    padding: 13px;
+    text-align: left;
+}
+
+.spec-table th {
+    background-color: #101820;
+    color: white;
+}
+
+/* ENQUIRY BUTTON */
+.details-btn {
+    display: inline-block;
+    background-color: #C6A15B;
+    color: #101820;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.details-btn:hover {
+    background-color: #101820;
+    color: white;
+}
+
+.back-link {
+    color: #A17B37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* DETAILS RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+
+    .details-section {
+        flex-direction: column;
+    }
+
+    .details-image,
+    .details-info {
+        width: 100%;
+    }
+
+    .details-image img {
+        height: 280px;
+    }
+
+    .details-info h2 {
+        font-size: 24px;
+    }
+}
+
